@@ -21,6 +21,8 @@ function draw() {
   fill("white")
   textSize(30)
   textFont("Gill Sans MT")
+  text("This is a simple website desigined to test visual reaction time.", displayWidth/2-350, displayHeight/2-300)
+  text("To use it, click on start, wait for the red box to turn green, and click on stop as soon as it does.", displayWidth/2-550, displayHeight/2-200)
   text(timer/10,displayWidth-100,displayHeight-100)
   if (box.shapeColor==="green" && frameCount % 3 == 0 && timer<120) {
     timer=timer+1;
@@ -55,6 +57,8 @@ function stopTimeout(){
     timer=0;
     text(extraTimer/10+" seconds is your reaction time.",displayWidth/2+200,displayHeight/2)
     text("Reload the page to try again!",displayWidth/2+200,displayHeight/2+100)
+    startButton.hide();
+    stopButton.hide();
   }
 }
 
